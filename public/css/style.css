@@ -1,0 +1,133 @@
+/* Nav */
+
+ul.nav {
+    padding-left: 0px;
+    background-color: #3D99CE;
+    text-align: center;
+}
+
+ul.nav>li {
+    display: inline-block;
+    padding: 20px 20px;
+}
+
+ul.nav>li:hover {
+    background-color: #2779BF;
+}
+
+ul.nav>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sidebar */
+
+ul.sidebar {
+    float: left;
+    padding-left: 0px;
+    background-color: #3D99CE;
+    text-align: center;
+    width: 20%;
+    margin-top: 30px;
+    border: 1px solid green;
+}
+
+ul.sidebar>li {
+    display: block;
+    padding: 10px 20px;
+}
+
+ul.sidebar>li:hover {
+    background-color: #2779BF;
+}
+
+ul.sidebar>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Products */
+
+ul.products {
+    float: left;
+    padding-left: 0px;
+    background-color: #3D99CE;
+    text-align: center;
+    width: 60%;
+    margin-top: 30px;
+    margin-left: 10px;
+    border: 1px solid green;
+}
+
+ul.products>li {
+    float: left;
+    display: block;
+    padding: 200px 0px;
+    width: 50%;
+    
+}
+
+ul.products>li:hover {
+    background-color: #2779BF;
+}
+
+ul.products>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer{
+    float: left;
+    padding-left: 0px;
+    background-color: #3D99CE;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid green;
+}
+
+/* Credential */
+
+ul.credential {
+    padding-left: 0px;
+    text-align: center;
+    background-color: #3D99CE;
+    width: 800px;
+    margin: auto;
+}
+
+ul.credential > li {
+    display: block;
+    height: 100px;
+    border: 1px solid green;
+}
+
+ul.credential > li.form-title {
+    height: 60px;
+}
+
+ul.credential > li > input.form-control {
+    border: 2px solid green;
+    padding-left: 10px;
+    width: 200px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+ul.credential > li > button.form-control {
+    border: 2px solid green;
+    padding-left: 0px;
+    width: 200px;
+    height: 40px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+ul.credential > li > button.form-control:hover {
+    background-color: #dbdbdb;
+    cursor: pointer;
+}
+
