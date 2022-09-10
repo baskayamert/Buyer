@@ -89,7 +89,7 @@ footer{
     border: 1px solid green;
 }
 
-/* Credential */
+/* Credentials */
 
 ul.credential {
     padding-left: 0px;
@@ -131,3 +131,70 @@ ul.credential > li > button.form-control:hover {
     cursor: pointer;
 }
 
+/* Alert Messages */
+
+.alert-success-message {
+    text-align: center;
+    color: green;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* Users Table For Admin Dashboard */
+
+table.table-users {
+    padding-left: 0px;
+    border: 2px #dddddd solid;
+    width: 50%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+table.table-users > tr, td, th {
+    text-align: center;
+    border: 1px #dddddd solid;
+}
+
+/* Button */
+
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* Green */
+.success {
+    border-color: #04AA6D;
+    color: green;
+}
+
+.success:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Red */
+.danger {
+    border-color: #f44336;
+    color: red;
+}
+  
+.danger:hover {
+    background: #f44336;
+    color: white;
+}
+
+/* Blue */
+.edit {
+    border-color: #2196F3;
+    color: dodgerblue;
+}
+  
+.edit:hover {
+    background: #2196F3;
+    color: white;
+}
+  

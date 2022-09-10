@@ -1,5 +1,7 @@
 {{#if sessionFlash.message}}
-{{sessionFlash.message}}
+    <div class="alert-success-message">
+        {{sessionFlash.message}}
+    </div>
 {{/if}}
 <form action="/users/login" method="POST">
     <ul class="credential">

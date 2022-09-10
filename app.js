@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const expressSession = require('express-session')
 const connectMongo = require('connect-mongo')
 const mongoose = require('mongoose')
+const methodOvverride = require('method-override')
 
 const app = express()
 
@@ -23,6 +24,8 @@ app.use(expressSession({
 }))
 
 app.use(express.static('public'))
+
+app.use(methodOvverride('_method'))
 
 // Template Engine
 app.engine('handlebars', exphbs.engine())
@@ -57,8 +60,10 @@ app.use((req, res, next) => {
 // Router
 const main = require('./router/main')
 const users = require('./router/users')
+const admin = require('./router/admin/index')
 
 app.use('/', main)
 app.use('/users', users)
+app.use('/admin', admin)
 
 app.listen(port, hostname, () => console.log(`The server works correctly, http://${hostname}:${port}`))
