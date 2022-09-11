@@ -200,3 +200,49 @@ table.table-users > tr, td, th {
     color: white;
 }
   
+
+/* Admin Navbar */
+
+ul.admin-nav {
+    padding-left: 0px;
+    background-color: #3D99CE;
+    text-align: center;
+    width: 750px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+ul.admin-nav>li {
+    display: inline-block;
+    padding: 20px 20px;
+}
+
+ul.adminnav>li:hover {
+    background-color: #2779BF;
+}
+
+ul.admin-nav>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Add New Category */
+
+.addNewCategory {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.addNewCategory > form > input {
+    padding-left: 10px;
+    border: 2px solid #2779BF;
+    border-radius: 20px;
+    width: 200px;
+    height: 30px;
+}
+
+.addNewCategory > form > button {
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+}
