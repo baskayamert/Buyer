@@ -1,0 +1,27 @@
+<table class="table-users">
+  <tr>
+    <th>E-mail</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr>
+    <form action="/admin/users/edit/{{user._id}}?_method=PUT" method="POST">
+        <td><input class="form-control" name="email" type="text" placeholder="E-mail *" required="required" value="{{user.email}}"></td>
+        <td><input class="form-control" name="username" type="text" placeholder="Username *" required="required" value="{{user.username}}"></td>
+        <td><input class="form-control" name="password" type="password" placeholder="Password *" required="required" value="{{user.password}}"></td>
+    <td>
+        <input type="hidden" name="_method" value="PUT">
+        <button type="submit" class="btn edit">EDIT</button>
+    </td>
+    </form>
+    <td>
+        <form action="/admin/{{user._id}}?_method=DELETE" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="btn danger">DELETE</button>
+        </form>
+        
+    </td>
+  </tr>
+</table>

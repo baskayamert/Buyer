@@ -2,6 +2,8 @@ const express = require('express')
 const User = require('../models/User')
 const router = express.Router()
 
+//REGISTER
+
 router.get('/register', (req, res) => {
     res.render('site/register')
 })
@@ -15,6 +17,8 @@ router.post('/register', (req, res) => {
         res.redirect('/users/login')
     })
 })
+
+//LOGIN
 
 router.get('/login', (req, res) => {
     res.render('site/login')
@@ -36,6 +40,8 @@ router.post('/login', (req, res) => {
         }
     })
 })
+
+//LOGOUT
 
 router.get('/logout', (req, res) => {
     req.session.destroy(() => {

@@ -191,6 +191,8 @@ table.table-users > tr, td, th {
 .edit {
     border-color: #2196F3;
     color: dodgerblue;
+    text-decoration: none;
+    padding: 1px 6px;
 }
   
 .edit:hover {
