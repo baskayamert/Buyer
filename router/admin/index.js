@@ -40,7 +40,7 @@ router.put('/users/edit/:id', (req, res) => {
 //Categories
 
 router.get('/categories', (req, res) => {
-    Category.find({}).sort({ $natural: -1 }).lean().then(categories => {
+    Category.find({}).sort({ name: 1 }).lean().then(categories => {
         res.render('admin/categories', {categories:categories})
     })
 })
@@ -59,6 +59,22 @@ router.post('/categories', (req, res) => {
 
 router.delete('/categories/:id', (req, res) => {
     Category.deleteOne({ _id: req.params.id }).lean().then(categories => {
+        res.redirect('/admin/categories')
+    })
+})
+
+router.get('/categories/edit/:id', (req, res) => {
+    Category.findOne({ _id: req.params.id}).lean().then(category => {
+        res.render('admin/editCategory', {category: category})
+    })
+    
+})
+
+router.put('/categories/edit/:id', (req, res) => {
+    const {name} = req.body
+    Category.findOneAndUpdate({ _id: req.params.id }, {$set:{
+        name: name
+    }}).lean().then(category => {
         res.redirect('/admin/categories')
     })
 })
