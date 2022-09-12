@@ -1,0 +1,27 @@
+{{> admin-nav}}
+
+<form action="/admin/products/addNewProduct" method="POST" enctype="multipart/form-data">
+    <ul class="addNewProduct">
+        <li class="form-title">
+            <h3>New Product</h3>
+        </li>
+        <li>
+            <input class="form-control" name="name" type="text" placeholder="Name *" required="required">
+        </li>
+        <li>
+            <input class="form-control" name="price" type="number" placeholder="Price *" required="required">
+        </li>
+        <li>
+            <select class="form-control" name="category">
+                {{#categories}}
+                    <option value="{{_id}}">{{name}}</option>
+                {{/categories}}
+
+            </select>
+        </li>
+            <input class="form-control" name="product_image" type="file" required="required">   
+        <li>
+            <button class="form-control" type="submit">Create</button>
+        </li>
+    </ul>
+</form>

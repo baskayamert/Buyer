@@ -105,20 +105,18 @@ ul.credential > li {
     border: 1px solid green;
 }
 
-ul.credential > li.form-title {
+li.form-title {
     height: 60px;
 }
 
-ul.credential > li > input.form-control {
-    border: 2px solid green;
+input.form-control {
     padding-left: 10px;
     width: 200px;
     height: 40px;
     margin-top: 30px;
 }
 
-ul.credential > li > button.form-control {
-    border: 2px solid green;
+button.form-control {
     padding-left: 0px;
     width: 200px;
     height: 40px;
@@ -126,7 +124,7 @@ ul.credential > li > button.form-control {
     text-align: center;
 }
 
-ul.credential > li > button.form-control:hover {
+button.form-control:hover {
     background-color: #dbdbdb;
     cursor: pointer;
 }
@@ -189,14 +187,14 @@ table.table-users > tr, td, th {
 
 /* Blue */
 .edit {
-    border-color: #2196F3;
-    color: dodgerblue;
+    border-color: #3D99CE;
+    color: #3D99CE;
     text-decoration: none;
     padding: 1px 6px;
 }
   
 .edit:hover {
-    background: #2196F3;
+    background: #3D99CE;
     color: white;
 }
   
@@ -210,6 +208,7 @@ ul.admin-nav {
     width: 750px;
     margin: auto;
     border-radius: 20px;
+    margin-bottom: 30px;
 }
 
 ul.admin-nav>li {
@@ -217,7 +216,7 @@ ul.admin-nav>li {
     padding: 20px 20px;
 }
 
-ul.adminnav>li:hover {
+ul.admin-nav>li:hover {
     background-color: #2779BF;
 }
 
@@ -226,16 +225,15 @@ ul.admin-nav>li>a {
     text-decoration: none;
 }
 
-/* Add New Category */
+/* Add a New Category */
 
 .addNewCategory {
     text-align: center;
-    margin-top: 30px;
 }
 
 .addNewCategory > form > input {
     padding-left: 10px;
-    border: 2px solid #2779BF;
+    border: 2px solid #3D99CE;
     border-radius: 20px;
     width: 200px;
     height: 30px;
@@ -245,4 +243,46 @@ ul.admin-nav>li>a {
     width: 100px;
     height: 30px;
     margin-left: 20px;
+}
+
+/* Add a New Product Button */
+
+.addNewProductButton {
+    text-align: center;
+}
+
+.addNewProductButton > button {
+    color: #3D99CE;
+    border: 2px solid #3D99CE;
+    border-radius: 20px;
+    width: 250px;
+    height: 40px;
+}
+
+.addNewProductButton > button:hover {
+    background-color: #3D99CE;
+    color: white;
+    cursor: pointer;
+}
+
+/* Add a New Product Page */
+
+ul.addNewProduct {
+    padding-left: 0px;
+    text-align: center;
+    background-color: #3D99CE;
+    width: 800px;
+    margin: auto;
+}
+
+ul.addNewProduct > li {
+    display: block;
+    height: 100px;
+}
+
+select.form-control {
+    padding-left: 10px;
+    width: 215px;
+    height: 45px;
+    margin-top: 30px;
 }

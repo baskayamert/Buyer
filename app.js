@@ -1,6 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
+const fileUpload = require('express-fileupload')
 const expressSession = require('express-session')
 const connectMongo = require('connect-mongo')
 const mongoose = require('mongoose')
@@ -22,6 +23,9 @@ app.use(expressSession({
     saveUninitialized: true,
     store: connectMongo.create({ mongoUrl: 'mongodb://127.0.0.1/ecommerce_db' })
 }))
+
+// It gives access to req.files
+app.use(fileUpload())
 
 app.use(express.static('public'))
 

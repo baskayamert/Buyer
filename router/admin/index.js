@@ -1,6 +1,8 @@
 const express = require('express')
+const path = require('path')
 const User = require('../../models/User')
 const Category = require('../../models/Category')
+const Product = require('../../models/Product')
 const router = express.Router()
 
 router.get('/', (req, res) => {
@@ -77,6 +79,40 @@ router.put('/categories/edit/:id', (req, res) => {
     }}).lean().then(category => {
         res.redirect('/admin/categories')
     })
+})
+
+//Products
+
+router.get('/products', (req, res) => {
+    Product.find({}).lean().then(products => {
+        res.render('admin/products', {products: products})  
+    })
+})
+
+router.get('/products/addNewProduct', (req, res) => {
+    Category.find({}).lean().then(categories => {
+        res.render('admin/addNewProduct', {categories: categories})
+    })
+})
+
+router.post('/products/addNewProduct', (req, res) => {
+    let product_image = req.files.product_image
+
+    product_image.mv(path.resolve(__dirname, '../../public/img/productImages', product_image.name))
+
+    Product.create({
+        ...req.body,
+        product_image: `/img/productImages/${product_image.name}`,
+        admin: req.session.userId
+    },)
+
+    req.session.sessionFlash = {
+        type:'alert alert-success',
+        message: 'The product has been successfully added!'
+    }
+
+    res.redirect('/admin/products')
+
 })
 
 module.exports = router

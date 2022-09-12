@@ -1,11 +1,7 @@
 {{> admin-nav}}
-
-<div class="addNewCategory">
-  <form action="/admin/categories" method="POST">
-    <input type="text" name="name" placeholder="write a category name..." required="required">
-    <button type="submit" class="btn success">Add</button>
-  </form>
-</div>
+<form class="addNewProductButton" action="/admin/products/addNewProduct" method="GET">
+  <button type="submit">ADD A NEW PRODUCT</button>
+</form>
 
 {{#if sessionFlash.message}}
     <div class="alert-success-message">
@@ -16,12 +12,22 @@
 <table class="table-users">
   <tr>
     <th>Name</th>
+    <th>Created By</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>Product Image</th>
+    <th>Creation Date</th>
     <th>Delete</th>
     <th>Edit</th>
   </tr>
-  {{#each categories}}
+  {{#each products}}
   <tr>
     <td>{{name}}</td>
+    <td>{{admin}}</td>
+    <td>{{price}}</td>
+    <td>{{category}}</td>
+    <td>{{product_image}}</td>
+    <td>{{date}}</td>
     <td>
         <form action="/admin/categories/{{_id}}?_method=DELETE" method="POST">
             <input type="hidden" name="_method" value="DELETE">
@@ -35,3 +41,4 @@
   </tr>
   {{/each}}
 </table>
+
