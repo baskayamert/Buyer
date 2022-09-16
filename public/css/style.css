@@ -286,3 +286,23 @@ select.form-control {
     height: 45px;
     margin-top: 30px;
 }
+
+/* Products Table For Admin Dashboard */
+
+table.table-products {
+    padding-left: 0px;
+    border: 2px #dddddd solid;
+    width: 1250px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+table.table-products > tr, td, th {
+    text-align: center;
+    border: 1px #dddddd solid;
+}
+
+img.product-img {
+    width: 25%;
+    height: 25%;
+}

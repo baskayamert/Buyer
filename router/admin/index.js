@@ -84,7 +84,7 @@ router.put('/categories/edit/:id', (req, res) => {
 //Products
 
 router.get('/products', (req, res) => {
-    Product.find({}).lean().then(products => {
+    Product.find({}).populate({path:'admin', model: User}).populate({path:'category', model:Category}).lean().then(products => {
         res.render('admin/products', {products: products})  
     })
 })

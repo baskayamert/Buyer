@@ -9,7 +9,7 @@
     </div>
 {{/if}}
 
-<table class="table-users">
+<table class="table-products">
   <tr>
     <th>Name</th>
     <th>Created By</th>
@@ -23,10 +23,10 @@
   {{#each products}}
   <tr>
     <td>{{name}}</td>
-    <td>{{admin}}</td>
+    <td>{{admin.username}}</td>
     <td>{{price}}</td>
-    <td>{{category}}</td>
-    <td>{{product_image}}</td>
+    <td>{{category.name}}</td>
+    <td><img class="product-img" src="{{product_image}}"></td>
     <td>{{date}}</td>
     <td>
         <form action="/admin/categories/{{_id}}?_method=DELETE" method="POST">
