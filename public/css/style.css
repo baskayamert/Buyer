@@ -303,6 +303,21 @@ table.table-products > tr, td, th {
 }
 
 img.product-img {
-    width: 25%;
-    height: 25%;
+    width: 200px;
+}
+
+/* Product Edit Page */
+ul.product-img-update {
+    padding-left: 0px;
+    text-align: center;
+}
+
+ul.product-img-update > li{
+    display: block;
+    margin: auto;
+    width: 200px;
+}
+
+ul.product-img-update > li > img{
+    width: 200px;
 }

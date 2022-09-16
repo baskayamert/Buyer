@@ -29,13 +29,13 @@
     <td><img class="product-img" src="{{product_image}}"></td>
     <td>{{date}}</td>
     <td>
-        <form action="/admin/categories/{{_id}}?_method=DELETE" method="POST">
+        <form action="/admin/products/{{_id}}?_method=DELETE" method="POST">
             <input type="hidden" name="_method" value="DELETE">
             <button type="submit" class="btn danger">DELETE</button>
         </form>
     </td>
     <td>
-        <a href="/admin/categories/edit/{{_id}}" class="btn edit">EDIT</a>
+        <a href="/admin/products/edit/{{_id}}" class="btn edit">EDIT</a>
       </form>
     </td>
   </tr>

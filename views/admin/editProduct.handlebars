@@ -1,0 +1,46 @@
+{{> admin-nav}}
+
+<table class="table-products">
+  <tr>
+    <th>Name</th>
+    <th>Created By</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>Product Image</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr>
+    <form action="/admin/products/edit/{{product._id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+      <td><input name="name" type="text" required="required" value="{{product.name}}"></td>
+      <td>{{product.admin.username}}</td>
+      <td><input name="price" type="number" required="required" value="{{product.price}}"></td>
+      <td>
+        <select name="category">
+          {{#categories}}
+            <option value="{{_id}}">{{name}}</option>
+          {{/categories}}
+        </select>
+      </td>
+      <td>
+        <ul class="product-img-update">
+          <li><img src="{{product.product_image}}"></li>
+          <li><input name="product_image" type="file" required="required"></li>
+        </ul>
+      </td>
+      <td>
+        <input type="hidden" name="_method" value="PUT">
+        <button type="submit" class="btn edit">EDIT</button>
+      </td>
+    </form>
+
+    <td>
+      <form action="/admin/products/{{product._id}}?_method=DELETE" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="btn danger">DELETE</button>
+      </form>
+    </td>
+  </tr>
+
+</table>
+

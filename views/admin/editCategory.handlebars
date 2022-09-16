@@ -8,11 +8,11 @@
   </tr>
   <tr>
     <form action="/admin/categories/edit/{{category._id}}?_method=PUT" method="POST">
-        <td><input name="name" type="text" placeholder="Name *" required="required" value="{{category.name}}"></td>
-    <td>
+      <td><input name="name" type="text" placeholder="Name *" required="required" value="{{category.name}}"></td>
+      <td>
         <input type="hidden" name="_method" value="PUT">
         <button type="submit" class="btn edit">EDIT</button>
-    </td>
+      </td>
     </form>
     <td>
         <form action="/admin/categories/{{category._id}}?_method=DELETE" method="POST">

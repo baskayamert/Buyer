@@ -89,6 +89,34 @@ router.get('/products', (req, res) => {
     })
 })
 
+router.delete('/products/:id', (req, res) => {
+    Product.deleteOne({_id: req.params.id}).lean().then(product => {
+        res.redirect('/admin/products')
+    })
+})
+
+router.get('/products/edit/:id', (req, res) => {
+    Product.findOne({_id: req.params.id}).populate({path:'admin', model: User}).populate({path:'category', model:Category}).lean().then(product => {
+        Category.find({}).lean().then(categories => {
+            res.render('admin/editProduct', {product: product, categories: categories}) 
+        })  
+    })
+})
+
+router.put('/products/edit/:id', (req, res) => {
+    const {name, price, category} = req.body
+    let product_image =  req.files.product_image
+    product_image.mv(path.resolve(__dirname, '../../public/img/productImages', product_image.name))
+    Product.findByIdAndUpdate({_id: req.params.id}, {$set:{
+        name: name,
+        price: price,
+        category: category,
+        product_image: `/img/productImages/${product_image.name}`
+    }}).lean().then(product => {    
+        res.redirect('/admin/products') 
+    })
+})
+
 router.get('/products/addNewProduct', (req, res) => {
     Category.find({}).lean().then(categories => {
         res.render('admin/addNewProduct', {categories: categories})
