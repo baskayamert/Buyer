@@ -14,7 +14,7 @@
     <form action="/admin/products/edit/{{product._id}}?_method=PUT" method="POST" enctype="multipart/form-data">
       <td><input name="name" type="text" required="required" value="{{product.name}}"></td>
       <td>{{product.admin.username}}</td>
-      <td><input name="price" type="number" required="required" value="{{product.price}}"></td>
+      <td><input name="price" type="number" step="any" required="required" value="{{product.price}}"></td>
       <td>
         <select name="category">
           {{#categories}}
