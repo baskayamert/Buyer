@@ -2,10 +2,13 @@
 
 
 <ul class="products">
-    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+    {{#each products}}
+    <li>
+        <a href="#">
+            <img src="{{product_image}}">
+            <p>{{name}}</p>
+            <p>{{price}}TL</p>
+        </a>
+    </li>
+    {{/each}}
 </ul>
