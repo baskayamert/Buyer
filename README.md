@@ -17,3 +17,14 @@ Buyer is e-commerce web application powered by Node.js to concretize my theoreti
 <img src="https://user-images.githubusercontent.com/48298106/190852062-c7c5c971-d8ed-4691-a2fb-83f2b9c736e3.png" width=1000>
 <img src="https://user-images.githubusercontent.com/48298106/190852086-cbe4f439-c4df-457c-ac59-be932b3d1b80.png" width=1000>
 <img src="https://user-images.githubusercontent.com/48298106/190852093-5add10c7-12d0-4554-b17e-3b25b6c0338a.png" width=1000>
+
+# Setup
+- Make sure you have MongoDB installed on your computer.
+- Clone this repository.
+- Run "npm instal -g nodemon".
+- Run "npm install" in the directory of the project.
+- Run "nodemon app".
+- Click "http://127.0.0.1:3001" by holding the ctrl.
+<img src="https://user-images.githubusercontent.com/48298106/190853431-6a3f33d6-e816-44d5-b261-2e61b61dde0e.png">
+
+
