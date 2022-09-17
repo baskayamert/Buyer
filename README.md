@@ -30,7 +30,7 @@ Buyer is e-commerce web application powered by Node.js to concretize my theoreti
 - Run "npm instal -g nodemon".
 - Run "npm install" in the directory of the project.
 - Run "nodemon app".
-- Click "http://127.0.0.1:3001" by holding the ctrl.
+- Click "http://127.0.0.1:3001" by holding ctrl.
 <img src="https://user-images.githubusercontent.com/48298106/190853431-6a3f33d6-e816-44d5-b261-2e61b61dde0e.png">
 
 
