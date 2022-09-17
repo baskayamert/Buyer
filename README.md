@@ -4,7 +4,7 @@ Buyer is e-commerce web application powered by Node.js to concretize my theoreti
 # Used Technologies
 - Javascript
 - Node.js
-- HTML, CSS, Handlebars
+- CSS, Handlebars
 - MongoDB
 
 # Screenshots
