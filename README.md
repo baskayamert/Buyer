@@ -1,7 +1,7 @@
 # Buyer
 Buyer is e-commerce web application powered by Node.js to concretize my theoretical information and improve myself. It has not been completed yet and I am still working on it.
 
-# Used Tecnologies
+# Used Technologies
 - Javascript
 - Node.js
 - HTML, CSS, Handlebars
