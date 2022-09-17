@@ -7,6 +7,12 @@ Buyer is e-commerce web application powered by Node.js to concretize my theoreti
 - CSS, Handlebars
 - MongoDB
 
+# Used Libraries
+- Express
+- Connect-mongo
+- Method-override
+- Mongoose
+
 # Screenshots
 <img src="https://user-images.githubusercontent.com/48298106/190851884-38702086-54f2-43f4-8523-b5a097312b18.png" width=1000>
 <img src="https://user-images.githubusercontent.com/48298106/190851913-6b217066-7481-4141-97de-7a989aae3587.png" width=1000>
