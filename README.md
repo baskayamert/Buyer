@@ -7,7 +7,7 @@ Buyer is e-commerce web application powered by Node.js to concretize my theoreti
 - CSS, Handlebars
 - MongoDB
 
-# Used Libraries
+# Some Used Libraries
 - Express
 - Connect-mongo
 - Method-override
