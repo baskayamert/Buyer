@@ -47,6 +47,14 @@ Dairy Products:
 - New product add page:
 <img src="https://user-images.githubusercontent.com/48298106/190904356-8daa2c96-32ed-4f84-8650-f822fe9f991b.png" width=1000px>
 
+- You can click on a product and you can go its private page.
+<img src="https://user-images.githubusercontent.com/48298106/190928895-01817354-e8b9-4d8e-9819-fa6e828d57c0.png" width=1000px>
+
+- You can add products to your cart by clicking the relevant button. Once you click the button, the product is saved to you cart.
+<img src="https://user-images.githubusercontent.com/48298106/190928935-183927e9-de6e-4f69-82de-d843c4f4f2db.png" width=1000px>
+
+- You can view your cart by clicking the Cart button on the navigation bar. These are the products added to the cart. The cart will be reorganized properly in the future.
+<img src="https://user-images.githubusercontent.com/48298106/190929004-dfabcec3-5d9e-4e76-b606-84436f1f1461.png" width=1000px>
 
 # Setup
 - Make sure you have MongoDB installed on your computer.
