@@ -39,10 +39,12 @@ Dairy Products:
 
 <img src="https://user-images.githubusercontent.com/48298106/190877917-f65f9074-dadd-442a-bb08-8001b5356103.png" width=1000px>
 
-- You can see the admin panel by simply clicking the admin button. This feature will be special for only admins in the future. Admin panel has three sections. These are "users", "categories", "products". Admins can edit or delete current users. Admins can add, delete and edit categories and products.
+- You can see the admin panel by simply clicking the admin button. This feature will be special for only admins in the future. The admin panel has three sections. These are "users", "categories", "products". Admins can edit or delete current users. Admins can add, delete and edit categories and products.
 <img src="https://user-images.githubusercontent.com/48298106/190852048-c6286529-d511-4842-9562-3f83068bf517.png" width=1000px>
 <img src="https://user-images.githubusercontent.com/48298106/190852062-c7c5c971-d8ed-4691-a2fb-83f2b9c736e3.png" width=1000px>
 <img src="https://user-images.githubusercontent.com/48298106/190877571-7e4eea40-2373-46bb-9638-44df5de51770.png" width=1000px>
+
+- New product add page:
 <img src="https://user-images.githubusercontent.com/48298106/190852093-5add10c7-12d0-4554-b17e-3b25b6c0338a.png" width=1000px>
 
 # Setup
