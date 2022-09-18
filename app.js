@@ -44,7 +44,8 @@ app.use((req, res, next) => {
     const { userId } = req.session
     if(userId) {
         res.locals = {
-            displayLink: true
+            displayLink: true,
+            userId: userId
         }
     } else {
         res.locals = {

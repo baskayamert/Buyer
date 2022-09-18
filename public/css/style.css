@@ -327,3 +327,48 @@ ul.product-img-update > li{
 ul.product-img-update > li > img{
     width: 200px;
 }
+
+/* Product By Id */
+.productById {
+    background-color: #3D99CE;
+    text-align: center;
+    width: 1131px;
+    margin-top: 30px;
+    margin: auto;
+    padding: 50px;
+}
+
+.productById > img {
+    width: 500px;
+}
+
+.productById > form > button {
+    background-color: white;
+    border:none;
+    border-radius: 7px;
+    width: 150px;
+    height: 50px;
+}
+
+.productById > form > button:hover {
+    background-color: #dbdbdb;
+    cursor: pointer;
+}
+
+/* Cart */
+.cart {
+    padding: 5px;
+    background-color: #3D99CE;
+    width: 1000px;
+    margin-top: 30px;
+}
+
+.cart > ul > li {
+    display: inline-block;
+    text-align: center;
+    
+}
+
+.cart > ul > li > img {
+    width: 100px;
+}
