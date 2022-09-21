@@ -3,7 +3,7 @@
     <p>{{product.name}}</p>
     <p>{{product.price}}TL</p>
     <form action="/cart/{{userId}}?_method=PUT" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="product" value="{{product._id}}">
+        <input type="hidden" name="productId" value="{{product._id}}">
         <input type="hidden" name="_method" value="PUT">
         <button type="submit">Add to The Cart</button>
     </form>

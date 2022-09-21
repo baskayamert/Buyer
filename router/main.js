@@ -30,15 +30,22 @@ router.get('/product/:productId', (req, res) => {
 
 router.get('/cart/:userId', (req, res) => {
     User.findOne({_id: req.params.userId}).populate({path: 'cart', model: Product}).lean().then(user => {
-        res.render('site/cart', {user: user})
+        let totalAmount = 0
+        let productsMap = []
+        user.cart.forEach(product => {
+            totalAmount += product.price
+        })
+        totalAmount = parseFloat(totalAmount).toFixed(2)
+
+        res.render('site/cart', {user: user, totalAmount: totalAmount, productsMap: productsMap})
     })
 })
 
 router.put('/cart/:userId', (req, res) => {
     User.findOneAndUpdate({_id: req.params.userId}, { $push: {
-        cart: req.body.product
+        cart: req.body.productId
     }}).lean().then(user => {
-        res.redirect(`/product/${req.body.product}`)
+        res.redirect(`/product/${req.body.productId}`)
     })
 })
 

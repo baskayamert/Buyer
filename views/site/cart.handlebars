@@ -1,13 +1,30 @@
 <div class="cart">
     <ul>
         {{#each user.cart}}
+  
             <li>
                 <img src="{{product_image}}">
                 <p>{{name}}</p>
                 <p>{{price}}TL</p>
+      
             </li>
+
         {{/each}}
     </ul>
+</div>
+<div class="paymentSection">
+    <h2>Order Summery</h2>
+    <ul>
+        {{#each user.cart}}
+        <li>{{name}} {{'\t'}} {{price}}TL</li>
+        {{/each}}
+    </ul>
+    +
+    _______________________________________________________
+    <br>
+    {{totalAmount}}TL
+    <br> <br>
+    <button type="submit">Go to Payment</button>
 </div>
 
 
