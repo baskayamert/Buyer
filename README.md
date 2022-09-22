@@ -54,7 +54,7 @@ Dairy Products:
 <img src="https://user-images.githubusercontent.com/48298106/190928935-183927e9-de6e-4f69-82de-d843c4f4f2db.png" width=1000px>
 
 - You can view your cart by clicking the Cart button on the navigation bar. These are the products added to the cart. The cart will be reorganized properly in the future.
-<img src="https://user-images.githubusercontent.com/48298106/191595480-b67e5c7e-3b9b-4640-8832-ad30f1ef8628.png" width=1000px>
+<img src="https://user-images.githubusercontent.com/48298106/191727667-4cda87e5-6106-4fc7-9693-f654f7a71667.png" width=1000px>
 
 # Setup
 - Make sure you have MongoDB installed on your computer.
