@@ -359,16 +359,18 @@ ul.product-img-update > li > img{
 .cart {
     float: left;
     background-color: #3D99CE;
-    width: 1000px;
+    width: 970px;
     margin-top: 30px;
-    padding-left: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
+    padding-top:10px;
+    padding-left: 0px;
 }
 
 .cart > ul > li {
     display: block;
     float: left;
     text-align: center;
+    font-size: 14px;
     width: 200px;
     height: 200px;
     border: 1px solid black;
@@ -381,13 +383,13 @@ ul.product-img-update > li > img{
 
 /* Payment Section */
 .paymentSection {
-    float: left;
+    float: right;
     background-color: #3D99CE;
-    margin-left: 10px;
     margin-top: 30px;
-    width: 845px;
+    width: 917px;
     padding-left: 0px;
     text-align: center;
+    padding-bottom: 25px;
 }
 
 .paymentSection > ul > li {

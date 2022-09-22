@@ -6,6 +6,7 @@ const expressSession = require('express-session')
 const connectMongo = require('connect-mongo')
 const mongoose = require('mongoose')
 const methodOvverride = require('method-override')
+const {multiply} = require('./helpers/hbs')
 
 const app = express()
 
@@ -31,8 +32,15 @@ app.use(express.static('public'))
 
 app.use(methodOvverride('_method'))
 
+// Handlebars Helpers
+const hbs = exphbs.create({
+    helpers: {
+        multiply: multiply
+    }
+})
+
 // Template Engine
-app.engine('handlebars', exphbs.engine())
+app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
 
 // Body-parser

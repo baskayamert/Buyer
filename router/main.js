@@ -31,13 +31,31 @@ router.get('/product/:productId', (req, res) => {
 router.get('/cart/:userId', (req, res) => {
     User.findOne({_id: req.params.userId}).populate({path: 'cart', model: Product}).lean().then(user => {
         let totalAmount = 0
-        let productsMap = []
+
+        let productsInCart = []
+
         user.cart.forEach(product => {
+            let isProductExist
+            for(product2 of productsInCart){
+                if(product2.product._id === product._id) {
+                    isProductExist = true
+                    product2.quantity += 1
+                    break
+                }
+            }
+
+            if(!isProductExist){
+                productsInCart.push({
+                    product: product,
+                    quantity: 1
+                })
+            }
+
             totalAmount += product.price
         })
         totalAmount = parseFloat(totalAmount).toFixed(2)
 
-        res.render('site/cart', {user: user, totalAmount: totalAmount, productsMap: productsMap})
+        res.render('site/cart', {user: user, totalAmount: totalAmount, productsInCart: productsInCart})
     })
 })
 

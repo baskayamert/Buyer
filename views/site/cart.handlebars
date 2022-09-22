@@ -1,11 +1,12 @@
 <div class="cart">
     <ul>
-        {{#each user.cart}}
+        {{#each productsInCart}}
   
             <li>
-                <img src="{{product_image}}">
-                <p>{{name}}</p>
-                <p>{{price}}TL</p>
+                <img src="{{product.product_image}}">
+                <p>{{product.name}}</p>
+                <p>{{product.price}}TL</p>
+                <p>({{quantity}})</p>
       
             </li>
 
@@ -15,8 +16,8 @@
 <div class="paymentSection">
     <h2>Order Summery</h2>
     <ul>
-        {{#each user.cart}}
-        <li>{{name}} {{'\t'}} {{price}}TL</li>
+        {{#each productsInCart}}
+        <li>({{quantity}}) {{product.name}} {{'\t'}} {{multiply quantity product.price}}TL</li>
         {{/each}}
     </ul>
     +
